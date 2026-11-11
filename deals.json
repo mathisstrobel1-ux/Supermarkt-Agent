@@ -1,0 +1,56 @@
+[
+  {
+    "store": "Lidl",
+    "title": "Barilla Pasta 500g",
+    "price": 0.88,
+    "old_price": 1.89,
+    "discount": 53,
+    "category": "Vorrat",
+    "is_prio": true
+  },
+  {
+    "store": "Kaufland",
+    "title": "Jacobs Krönung 500g",
+    "price": 3.99,
+    "old_price": 7.49,
+    "discount": 47,
+    "category": "Kaffee",
+    "is_prio": true
+  },
+  {
+    "store": "Lidl",
+    "title": "Oatly Haferdrink 1L",
+    "price": 1.29,
+    "old_price": 2.19,
+    "discount": 41,
+    "category": "Veggie",
+    "is_prio": true
+  },
+  {
+    "store": "Kaufland",
+    "title": "Nutella 750g",
+    "price": 2.79,
+    "old_price": 4.29,
+    "discount": 35,
+    "category": "Süßwaren",
+    "is_prio": true
+  },
+  {
+    "store": "REWE",
+    "title": "Melitta Kaffee 500g",
+    "price": 4.44,
+    "old_price": 6.99,
+    "discount": 36,
+    "category": "Kaffee",
+    "is_prio": false
+  },
+  {
+    "store": "EDEKA",
+    "title": "Tchibo Kaffee 500g",
+    "price": 4.99,
+    "old_price": 7.49,
+    "discount": 33,
+    "category": "Kaffee",
+    "is_prio": false
+  }
+]
