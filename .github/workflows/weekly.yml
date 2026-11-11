@@ -2,8 +2,8 @@ name: Woechentlicher Angebot Scan
 
 on:
   schedule:
-    - cron: '0 6 * * 1' # Jeden Montag um 06:00 Uhr morgens
-  workflow_dispatch: # Erlaubt manuelles Starten per Klick
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,10 +17,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Bot ausführen
+      - name: Bot ausfuehren
         run: python scraper.py
 
-      - name: Änderungen speichern
+      - name: Aenderungen speichern
         run: |
           git config --global user.name "Angebot-Bot"
           git config --global user.email "bot@github.com"
