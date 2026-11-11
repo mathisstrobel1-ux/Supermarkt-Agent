@@ -1,1 +1,29 @@
+name: Woechentlicher Angebot Scan
 
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Jeden Montag um 06:00 Uhr morgens
+  workflow_dispatch: # Erlaubt manuelles Starten per Klick
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v3
+
+      - name: Python einrichten
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Bot ausführen
+        run: python scraper.py
+
+      - name: Änderungen speichern
+        run: |
+          git config --global user.name "Angebot-Bot"
+          git config --global user.email "bot@github.com"
+          git add deals.json
+          git commit -m "Woechentliche Angebote aktualisiert" || exit 0
+          git push
